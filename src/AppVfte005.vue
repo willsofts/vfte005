@@ -28,6 +28,7 @@ export default {
     const dataChunk = {};
     const dataCategory = {
       tkactive: [{id: "0", text: "Active"},{id: "1", text: "Inactive"}],
+      tcompbranch: []
     };
     let labels = ref(getLabelModel());
     let alreadyLoading = ref(false);
@@ -60,7 +61,7 @@ export default {
     loadDataCategories(loading,callback) {
       console.log("loadDataCategories: loading",loading);
       if(!loading) return;
-      let jsondata = {names: ["tkactive"]};
+      let jsondata = {names: ["tkactive","tcompbranch"]};
       let formdata = serializeParameters(jsondata);
       $.ajax({
         url: getApiUrl()+"/api/category/lists",
@@ -97,6 +98,12 @@ export default {
         tkactive = tk_category.map((item) => { return { id: item.typeid, text: "TH"==lang?item.nameth:item.nameen } });
       }
       if(tkactive) this.dataCategory.tkactive = tkactive;
+      let tcompbranch;
+      let tk_compbranch = this.dataChunk["tcompbranch"];
+      if(tk_compbranch) {
+        tcompbranch = tk_compbranch.map((item) => { return { id: item.branch, text: "TH"==lang?item.nameth:item.nameen } });
+      }
+      if(tcompbranch) this.dataCategory.tcompbranch = tcompbranch;
     },
     dataSelected(item,action) {
       //listen action from search form
