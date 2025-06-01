@@ -1,9 +1,10 @@
 const appVariables = {
-    MULTI_LANGUAGES: ["EN","TH"],
-    BASE_CSS: "./css/theme_green_sea.css",
+    API_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiY2FlMmIxM2MtMmQyYi00MjEwLTllYjUtNTc5OGM1ODA2NWUwIiwic2l0ZSI6IkZXUyIsImFjY2Vzc29yIjoidHNvIiwidHlwZSI6IkciLCJpYXQiOjE3NDAzNjQzMzIsImV4cCI6MjIxODc2ODUwNzMyfQ.W8JGCNfLehUiQBh7_gviOWhOG-mnb9n1f_S9gEvUSmk",
     API_URL: "http://127.0.0.1:8080",
     BASE_URL: "http://127.0.0.1:8080",
-    API_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiY2FlMmIxM2MtMmQyYi00MjEwLTllYjUtNTc5OGM1ODA2NWUwIiwic2l0ZSI6IkZXUyIsImFjY2Vzc29yIjoidHNvIiwidHlwZSI6IkciLCJpYXQiOjE3NDAzNjQzMzIsImV4cCI6MjIxODc2ODUwNzMyfQ.W8JGCNfLehUiQBh7_gviOWhOG-mnb9n1f_S9gEvUSmk"
+    IMG_URL: "http://localhost:8080",
+    MULTI_LANGUAGES: ["EN","TH"],
+    BASE_CSS: "./css/theme_green_sea.css"
 };
 function getAppConfigs() {
     return appVariables;
