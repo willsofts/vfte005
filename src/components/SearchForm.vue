@@ -1,23 +1,23 @@
 <template>
 <div id="searchpanel" class="panel-body search-panel">
     <div class="row row-height">
-        <div class="col-height col-md-3">
+        <div class="col-height col-md-2">
             <label>{{ labels.usernames_label }}</label>
             <input type="text" v-model="localData.username" class="form-control input-md" maxlength="50" />
         </div>
-        <div class="col-height col-md-3">
+        <div class="col-height col-md-2">
             <label>{{ labels.usertnames_label }}</label>
             <input type="text" v-model="localData.usertname" class="form-control input-md" maxlength="50" />
         </div>
-        <div class="col-height col-md-3">
+        <div class="col-height col-md-2">
             <label>{{ labels.usertsurnames_label }}</label>
             <input type="text" v-model="localData.usertsurname" class="form-control input-md" maxlength="50" />
         </div>
         <div class="col-height col-md">
             <br/>
-            <button @click="searchClick" class="btn btn-dark btn-sm btn-ctrl"><i class="fa fa-search fa-btn-icon" aria-hidden="true"></i>{{ labels.search_button }}</button>
-            <button @click="resetClick" class="btn btn-dark btn-sm btn-ctrl"><i class="fa fa-refresh fa-btn-icon" aria-hidden="true"></i>{{ labels.reset_button }}</button>
-            <button @click="insertClick" class="btn btn-dark btn-sm btn-ctrl pull-right"><i class="fa fa-plus fa-btn-icon" aria-hidden="true"></i>{{ labels.insert_button }}</button>
+            <button id="searchbutton" @click="searchClick" class="btn btn-dark btn-sm btn-ctrl"><i class="fa fa-search fa-btn-icon" aria-hidden="true"></i>{{ labels.search_button }}</button>
+            <button id="resetbutton" @click="resetClick" class="btn btn-dark btn-sm btn-ctrl"><i class="fa fa-refresh fa-btn-icon" aria-hidden="true"></i>{{ labels.reset_button }}</button>
+            <button id="insertbutton" @click="insertClick" class="btn btn-dark btn-sm btn-ctrl pull-right"><i class="fa fa-plus fa-btn-icon" aria-hidden="true"></i>{{ labels.insert_button }}</button>
         </div>
     </div>
     <div id="listpanel" class="table-responsive fa-list-panel">
